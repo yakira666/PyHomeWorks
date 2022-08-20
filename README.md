@@ -1,4 +1,2 @@
-# HomeWorks
-# HomeWorks
-# HomeWorks
+
 # PyHomemmWorks
