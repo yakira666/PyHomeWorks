@@ -1,5 +1,6 @@
 fnum = int(input("Введине первое целое число: "))
 tnum = int(input("Введине первое целое число: "))
+
 print(fnum, "+", tnum, "=", fnum + tnum)
 print(fnum, "-", tnum, "=", fnum - tnum)
 print(fnum, "*", tnum, "=", fnum * tnum)

@@ -1,3 +1,7 @@
-fnum = float(input("Введине длину комнаты (м): "))
-snum = float(input("Введине ширину комнаты (м): "))
-print("Площадь комнаты равна", fnum * snum, "кв.м.")
+length = float(input("Введине длину комнаты (м): "))
+width = float(input("Введине ширину комнаты (м): "))
+
+# area = length * width
+# print("Площадь комнаты равна", area, "кв.м.")
+
+print("Площадь комнаты равна", length * width, "кв.м.")
