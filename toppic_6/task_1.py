@@ -7,4 +7,4 @@ if arithmetic_progression_tnum - arithmetic_progression_snum == \
         arithmetic_progression_snum - arithmetic_progression_fnum:
     print("Да, является!")
 else:
-    print("Не является!")
+    print("Не является!") # Отлично!
