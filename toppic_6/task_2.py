@@ -11,10 +11,12 @@ snum = int(input("Введите второе число: "))
 #     elif snum > fnum:
 #         print("Меньше число", fnum)
 
-# Можно было упростить задачу
-if fnum < snum:
-    print("Меньшее число", fnum)
-elif fnum > snum:
-    print("Меньшее число", snum)
-else:
-    print("Числа равны")
+# # Можно было упростить задачу
+# if fnum < snum:
+#     print("Меньшее число", fnum)
+# elif fnum > snum:
+#     print("Меньшее число", snum)
+# else:
+#     print("Числа равны")
+
+print("Числа равны") if fnum == snum else print("Меньше числа", snum) if snum < fnum else print("Меньше число", fnum)
