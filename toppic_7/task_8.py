@@ -11,7 +11,22 @@ for i in range(input_stars):
     for k in range(0, i + 1):
         print("*", end=" ")
     print()
-for i in range(input_stars-1, 0, -1):
+
+for i in range(input_stars - 1, 0, -1):
     for k in range(i, 0, -1):
         print("*", end=" ")
+    print()
+
+
+# моё решение
+n = int(input("Введите количество звезд: "))
+
+for i in range(n):
+    for j in range(i):
+        print('*', end=' ')
+    print()
+
+for i in range(n, 0, -1):
+    for j in range(i):
+        print('*', end=' ')
     print()
