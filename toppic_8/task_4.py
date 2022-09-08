@@ -7,3 +7,4 @@ for i in list_nums:
         continue
     elif i % 5 == 0:
         print(i)
+# Отлично!
