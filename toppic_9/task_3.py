@@ -1,0 +1,6 @@
+data = input("Введите любое слово: ")
+print(data[:5:1])
+print(data[:-2:])
+print(data[::2])
+print(data[1::2])
+print(data[::-2])

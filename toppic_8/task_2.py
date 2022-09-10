@@ -19,3 +19,9 @@ for i in range(10, 21):
         continue
     else:
         print(i)
+
+# Решение без else
+for i in range(10, 21):
+    if i % 3 == 0:
+        continue
+    print(i)
