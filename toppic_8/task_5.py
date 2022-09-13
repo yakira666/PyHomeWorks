@@ -6,14 +6,10 @@ for i in data_list:
 
     print("Тип элемента", i, type(i))
 
-# Молодец! Но зачем нам нужен блок else после оператора continue?
-# И так мы не доберемся туда, если бы условия были верными
-# ИСПРАВЛЕННО
-# Ещё одно решение, использующее встроенную функцию isinstance()
 for item in data_list:
     if isinstance(item, float):
         continue
 
     print("Тип элемента", item, type(item))
 
-
+# Отлично!
