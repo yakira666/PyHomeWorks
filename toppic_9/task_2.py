@@ -1,9 +1,9 @@
-soglasniy = ["а", "у", "е", "о", "э", "я", "ы", "и", "ё"]  # в списке не все гласные буквы русского алфавита
+glasniy = ["а", "у", "е", "о", "э", "я", "ы", "и", "ё", "ю"]
 data = input("Введите любое слово: ")
 g = 0
 sg = 0
 for i in data:
-    if i in soglasniy:
+    if i in glasniy:
         g += 1
     else:
         sg += 1
@@ -38,5 +38,5 @@ for let in word:
     # иначе увеличиваю количество согласных
     consonants_count += 1
 
-print('Количество гласных букв: ', vowels_count)
-print('Количество согласных букв: ', consonants_count)
+print('Количество гласных букв: ', consonants_count)
+print('Количество согласных букв: ', vowels_count)
