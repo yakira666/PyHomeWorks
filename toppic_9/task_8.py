@@ -1,18 +1,24 @@
-data = input("Введите любую строку: ")
-# №1
-data_split = len(data.split())
-if data_split > 1:
-    print("В строке", "\"" + data + "\"", "-", data_split, "слов")
-elif data_split == 1:
-    print("Строка состоит из одного слова")
-else:
-    print("Строка пустая")
-
-# Решение работает, но не оптимально
+# data = input("Введите любую строку: ").split()
+# # №1
+# if len(data) == 1:
+#     print("Строка состоит из одного слова")
+# elif len(data) == 0:
+#     print("Строка пустая")
+# elif len(data) > 1:
+#     print("В строке", "\"" + " ".join(data) + "\"", "-", len(data), "слов")
 
 # Думаю, что пришло время начать использовать моржа :)
 
-
 # №2
+# if len(data := input("Введите любую строку: ").split()) == 0:
+#     print("Строка пустая")
+# elif len(data) > 0:
+#     if len(data) == 1:
+#         print("Строка состоит из одного слова")
+#     else:
+#         print("В строке", "\"" + " ".join(data) + "\"", "-", len(data), "слов")
 
-#     print(data.count(" ")+1)
+# №3
+print("Строка пустая") if len(data := input("Введите любую строку: ").split()) == 0 else \
+    print("Строка состоит из одного слова") if len(data) == 1 \
+    else print("В строке", "\"" + " ".join(data) + "\"", "-", len(data), "слов")
