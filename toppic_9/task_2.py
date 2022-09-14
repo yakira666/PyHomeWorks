@@ -7,8 +7,8 @@ for i in data:
         g += 1
     else:
         sg += 1
-print("Количество гласных букв: ", g)
-print("Количество согласных букв: ", sg)
+print("Количество гласных букв:", g)
+print("Количество согласных букв:", sg)
 
 # Твоё решение
 '''Введите любое слово: Предприниматель
@@ -32,11 +32,11 @@ consonants_count = 0  # количество согласных
 
 for let in word:
     if let not in vowels:  # если буква нет в последовательности гласных
-        vowels_count += 1
+        consonants_count += 1
         continue
 
-    # иначе увеличиваю количество согласных
-    consonants_count += 1
+    # иначе увеличиваю количество гласных
+    vowels_count += 1
 
-print('Количество гласных букв: ', consonants_count)
-print('Количество согласных букв: ', vowels_count)
+print('Количество гласных букв:', vowels_count)
+print('Количество согласных букв:', consonants_count)
