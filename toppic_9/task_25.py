@@ -1,5 +1,6 @@
 data = int(input("Введите число от 1 до 26: "))
 ascii_char = 65
+
 if data < 27:
     print('+___ ' * data)
     for i in range(data):
@@ -10,5 +11,12 @@ if data < 27:
     print()
     print('|__\\ ' * data)
     print(f'|    ' * data)
+
 else:
     print("Введите число от 1 до 26 ... ")
+
+'''
+Отлично!
+
+С помощью оператора моржа можно улучшить решение задачи
+'''
