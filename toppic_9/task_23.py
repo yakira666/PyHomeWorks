@@ -2,6 +2,7 @@ baby, child, adult, elderly = 0, 0, 0, 0  # Количество детей   # 
 # 3 до 12 до 3 # Количество взрослых  # Количество пенсионеров
 price_for_baby, price_for_child, price_for_abult, price_for_elderly = 0, 1055, 2099, 1449
 plank_1, plank_2, plank_3, plank_4 = 0, 2, 12, 65  # Ввод возрастных планок
+
 while (people_age := int(input("Введите возраст посетителя (0 для окончания ввода): "))) != 0:
     if plank_1 < people_age <= plank_2:
         baby += 1
@@ -11,6 +12,7 @@ while (people_age := int(input("Введите возраст посетител
         adult += 1
     elif people_age > plank_4:
         elderly += 1
+
 print(
     f'\nКоличестово детей до двух лет: {baby}\n'
     f'Количестово детей от 3-х до 12 лет: {child}\n'
@@ -20,3 +22,4 @@ print(
     f'{(elderly * price_for_elderly) + (adult * price_for_abult) + (baby * price_for_baby) + (child * price_for_child):,.2f}'
     f'{chr(8381)}\n')
 
+# Задаче решена корректно, можно улучшить читаемость кода :)

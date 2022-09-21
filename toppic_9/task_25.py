@@ -1,6 +1,6 @@
 ascii_char = 65
 
-if (data := int(input("Введите число от 1 до 26: "))) < 27:
+if (data := int(input("Введите число от 1 до 26: "))) in range(1, 27):
     print('+___ ' * data)
     for i in range(data):
         # print(f'+___\n|{chr(ascii_char)} / \n|__\\ \n|   ') #  Оставил для пробы решения
