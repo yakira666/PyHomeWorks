@@ -1,18 +1,14 @@
-# Программа после первого раза будет выдавать неверный результат, эту ошибку легко заметить, попробуй найти :)
-
 char_space = 0
 char_upper = 0
 char_lower = 0
 char_digit = 0
 char_symbol = 0
 
-# Использовать n плохое решение, у строк есть метод, который поможет тебе центрировать строку :)
-# Попробуй с помощью метода это реализовать
-n = "\t"  # Сделал так тк никогда не знаю точную длину вводной строки
 while data := input("Введите любую строку (оставьте пустым для выхода): "):
-    print(f'{n * 5}В строке \"{data}\"')
+    space = len(data)+30
+    print(f'В строке \"{data}\"'.rjust(space))
     for i in data:
-        if i == " ":  # почему бы здесь не использовать метод, который проверяет пробельный символов
+        if i.isspace():
             char_space += 1
         elif i.isupper():
             char_upper += 1
@@ -27,13 +23,20 @@ while data := input("Введите любую строку (оставьте п
           f'Строчные буквы: {char_lower}\n'
           f'Числа: {char_digit}\n'
           f'Специальные символы: {char_symbol}\n')
-    # data_chars = "\'\")%$&/*^:;/\\|+-_(]}@!?[{<=>,.`"
-    # print(f"В строке \"{data: >20}\"")
-    # print(f'Пробелы: {data.count(" ")}')
-    # print(f'Прописные буквы: {sum(i.isupper() for i in data)}')
-    # print(f'Строчные буквы: {sum(i.islower() for i in data)}')
-    # print(f'Числа: {sum(i.isdigit() for i in data)}')
-    # print(f'Специальные строки: {sum(i in data_chars for i in data)}\n')
+
+    char_space = 0
+    char_upper = 0
+    char_lower = 0
+    char_digit = 0
+    char_symbol = 0
+# data_chars = "\'\")%$&/*^:;/\\|+-_(]}@!?[{<=>,.`"
+# print(f"В строке \"{data: >20}\"")
+# print(f'Пробелы: {data.count(" ")}')
+# print(f'Прописные буквы: {sum(i.isupper() for i in data)}')
+# print(f'Строчные буквы: {sum(i.islower() for i in data)}')
+# print(f'Числа: {sum(i.isdigit() for i in data)}')
+# print(f'Специальные строки: {sum(i in data_chars for i in data)}\n')
+
 '''
 ДЛЯ ТЕСТА
 
