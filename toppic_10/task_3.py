@@ -3,3 +3,5 @@ data = int(input("Введите число для умножения каждо
 f_list = ['a', 'b', 'c', 'd']
 s_list = [i * data for i in f_list]
 print(s_list)
+
+# Отлично!
