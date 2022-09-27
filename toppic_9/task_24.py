@@ -1,13 +1,7 @@
-char_space = 0
-char_upper = 0
-char_lower = 0
-char_digit = 0
-char_symbol = 0
-
 while data := input("Введите любую строку (оставьте пустым для выхода): "):
-
-    space = len(data)+30
-    print(f'В строке \"{data}\"'.rjust(space))  # ты должен центрировать текст по центру, а не по правому краю
+    char_space, char_upper, char_lower, char_digit, char_symbol = 0, 0, 0, 0, 0
+    print()
+    print(f'В строке \"{data}\"'.center(len(data)+50))
 
     for i in data:
         if i.isspace():
@@ -28,11 +22,11 @@ while data := input("Введите любую строку (оставьте п
           f'Специальные символы: {char_symbol}\n')
 
     # Это очень плохое решение, подумай как можно обнулить значение глобавльных переменных не назначая их снова?
-    char_space = 0
-    char_upper = 0
-    char_lower = 0
-    char_digit = 0
-    char_symbol = 0
+    # char_space = 0
+    # char_upper = 0
+    # char_lower = 0
+    # char_digit = 0
+    # char_symbol = 0
 # data_chars = "\'\")%$&/*^:;/\\|+-_(]}@!?[{<=>,.`"
 # print(f"В строке \"{data: >20}\"")
 # print(f'Пробелы: {data.count(" ")}')
