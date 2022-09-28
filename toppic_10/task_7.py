@@ -1,13 +1,12 @@
-f_list = [3, 3, 2, 1, 5, 3, 8, 11]
+f_list = [int(i) for i in input().split()]
 data = int(input("Укажите элеменет для удаления: "))
 
-# Не реализована проверка, когда список пуст, ещё раз почитай пожалуйста условие задачи
-if data not in f_list:
+if len(f_list) == 0:
+    print("Пустой список")
+elif data not in f_list:
     print("Не найден")
 else:
-    # Здесь можно поступить хитро, нам не нужно обходить весь список
-    # подумай как можем пройти по списку столько раз, сколько в нём встречается удаляемое значение?
-    for i in f_list:
+    for i in range(f_list.count(data)):
         if data in f_list:
             f_list.remove(data)
     print(f_list)
