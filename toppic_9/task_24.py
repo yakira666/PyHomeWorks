@@ -1,7 +1,7 @@
 while data := input("Введите любую строку (оставьте пустым для выхода): "):
     char_space, char_upper, char_lower, char_digit, char_symbol = 0, 0, 0, 0, 0
     print()
-    print(f'В строке \"{data}\"'.center(len(data)+50))
+    print(f'В строке \"{data}\"'.center(len(data) + 50))
 
     for i in data:
         if i.isspace():
