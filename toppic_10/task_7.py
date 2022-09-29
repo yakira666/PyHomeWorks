@@ -7,6 +7,7 @@ elif data not in f_list:
     print("Не найден")
 else:
     for i in range(f_list.count(data)):
-        if data in f_list:
-            f_list.remove(data)
+        f_list.remove(data)
     print(f_list)
+
+# Молодец!
