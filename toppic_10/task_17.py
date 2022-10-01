@@ -3,3 +3,4 @@ for i in range(1, len(data)):
     if data[i-1] < data[i]:
         print(data[i], end=" ")
 
+# Отлично!

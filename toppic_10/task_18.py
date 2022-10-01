@@ -1,10 +1,8 @@
 data = [int(i) for i in input("Введите числа, разделенные пробелами: ").split()]
-counter = 0
+
 for i in range(len(data)):
     for j in range(len(data)):
-        if data[i] == data[j]:
-            counter += 1
-        continue
-    if counter == 1:
-        print(data[i], end=" ")
-    counter = 0
+        if data[i] == data[j]:  # нужно добавить ещё кое-какое условие, чтобы не использовать счётчик
+            ...
+
+# Если число уже встречалось тебе нужно выйти из этого цикла, иначе просто выведешь это число
