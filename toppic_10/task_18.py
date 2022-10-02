@@ -2,7 +2,7 @@ data = [int(i) for i in input("Введите числа, разделенные
 
 for i in range(len(data)):
     for j in range(len(data)):
-        if data[i] == data[j]:  # нужно добавить ещё кое-какое условие, чтобы не использовать счётчик
-            ...
-
-# Если число уже встречалось тебе нужно выйти из этого цикла, иначе просто выведешь это число
+        if data[i] == data[j] and data[i] in data[:j:]:
+            break
+    else:
+        print(data[i], end=" ")
