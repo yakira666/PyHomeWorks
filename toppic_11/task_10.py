@@ -1,13 +1,24 @@
 data = [(), (), ('',), ('a', 'b'), ('a', 'b', 'c'), ('d')]
-# # №1
-# data_2 = []
-# for i in range(len(data)):
-#     if data[i] != ():
-#         data_2.append(data[i])
-# print(data_2)
+# №1
+data_2 = []
+for i in range(len(data)):
+    if data[i] != ():  # так делать не стоит, как можно написать это условие с помощью логического оператора?
+        data_2.append(data[i])
+print(data_2)
 
 # №2 ДОДЕЛАТЬ НА ИНПУТ
-data = [i for i in input().strip("[]").replace("(", "").replace(")", "").replace(",", "").replace("\'","").replace("\'", "").replace(" ", "")]
-print(data)
+# data = [i for i in input()
+#     .strip(" []")
+#     .replace("(", "")
+#     .replace(")", "")
+#     .replace(",", "")
+#     .replace("\'", "")
+#     .replace("\'", "")
+#     .replace(" ", "")]
+#
+# print(data)
 
 # №3
+
+# Задачу можно решить одной строкой кода, используя первый (№1) метод решения.
+# В этой задаче правильнее было бы использовать генератор списков

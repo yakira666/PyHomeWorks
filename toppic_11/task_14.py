@@ -1,6 +1,6 @@
-data = input("Введите ваш текст: ").split()
+data = tuple(input("Введите ваш текст: ").split())
 ind = int(input("Укажите шаг, положительное целое число: "))
-a = tuple(data)
-b = data[::ind]
-# print(a, b)
-print(f'Исходный кортеж: {tuple(data)}\nИзмененный кортеж: {tuple(data[::ind])}')
+
+print(f'Исходный кортеж: {data}\nИзмененный кортеж: {data[::ind]}')
+
+# Молодец!

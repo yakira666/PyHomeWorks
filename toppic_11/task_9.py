@@ -1,10 +1,11 @@
 data = [(10, 20, 40), (40, 50, 60), (70, 80, 90)]
-num = int(input())
+print(f'Исходный список кортежей: {data}')
+num = int(input('Укажите значение: '))
 # # №1
 # for item in data:
 #     print(item[:-1]+(num, ))
 # # №2
-# print(f'Измененный список кортежей: {[item[:-1]+(num, ) for item in data]}')
+print(f'Измененный список кортежей: {[item[:-1] + (num,) for item in data]}')
 
 # # № 3
 # data_2 = [[int(j) for j in data[i]]for i in range(len(data))]
