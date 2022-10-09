@@ -4,7 +4,7 @@
 # print(f'Кортеж: {tuple(data)}')
 
 # №2
-data = [int(i) for i in input("Введите исходный список: ").strip("[]").replace(",", "").split()]
+data = [int(i) for i in input("Введите исходный список: ").strip(" []").replace(",", "").split()]
 
 print(f'Исходный список: {data}')
 print(f'Кортеж: {tuple(data)}')
