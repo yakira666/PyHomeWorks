@@ -6,12 +6,8 @@
 Примечание: Задачу можно решить в одну строчку.
 """
 
-nums = [int(i) for i in input("Введите элементы первого списка: ").split()]
-nums_2 = [int(i) for i in input("Введите элементы второго списка: ").split()]
-print(*(sorted(set(nums).intersection(nums_2), reverse=False)))
-
-
-# Задача решена неоптимальным способом, можно решить одной строкой кода
+print(*(sorted(set([int(i) for i in input("Введите элементы первого списка: ").split()])
+               .intersection([int(i) for i in input("Введите элементы второго списка: ").split()]))))
 
 """
 DEBUG
