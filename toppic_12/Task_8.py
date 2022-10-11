@@ -6,17 +6,14 @@
 встречалось
 """
 
-nums = [int(i) for i in input("Введите элементы первого списка: ").split()]
-for i in range(len(nums)):
-    if nums[i] in (nums[:i]):
-        print("ДА")
-    else:
+nums_set = set()
+
+for i in (nums := input("Введите элементы первого списка: ").split()):
+    if i not in nums_set:
         print("НЕТ")
-
-
-# Неверное решение, подумай как можно тут применить множество?
-# У нас тема Работа со множествами :)
-
+        nums_set.add(i)
+    else:
+        print("ДА")
 
 """
 DEBUG
