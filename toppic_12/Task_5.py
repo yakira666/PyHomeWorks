@@ -7,8 +7,15 @@
 Примечание: Задачу можно решить в одну строчку.
 """
 
+# print(
+#     f'{len(set(nums := [float(i) for i in input("Введите элементы первого списка: ").split()]).intersection(set(nums_2 := [float(i) for i in input("Введите элементы второго списка: ").split()])))}')
+
+
+# Зачем нужны были переменные?
+
+# Я бы упростил задачу таким образом
 print(
-    f'{len(set(nums := [float(i) for i in input("Введите элементы первого списка: ").split()]).intersection(set(nums_2 := [float(i) for i in input("Введите элементы второго списка: ").split()])))}')
+    f'{len(set([float(i) for i in input("Введите элементы 1-го списка: ").split()]) & set([float(i) for i in input("Введите элементы 2-го списка: ").split()]))}')
 
 """
 DEBUG

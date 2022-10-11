@@ -10,6 +10,9 @@ nums = [int(i) for i in input("Введите элементы первого с
 nums_2 = [int(i) for i in input("Введите элементы второго списка: ").split()]
 print(*(sorted(set(nums).intersection(nums_2), reverse=False)))
 
+
+# Задача решена неоптимальным способом, можно решить одной строкой кода
+
 """
 DEBUG
 89 12 45 87 20 97 21 24 54 76 23 56 76

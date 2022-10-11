@@ -7,9 +7,20 @@
 
 nums = [int(i) for i in input("Введите элементы первого списка: ").split()]
 nums_2 = [int(i) for i in input("Введите элементы второго списка: ").split()]
+
 print(f'Да, списки имеют общие элементы: {set(nums).intersection(nums_2)}') \
-    if len(set(nums).intersection(nums_2)) > 0 \
+    if len(set(nums).intersection(nums_2)) \
     else print("Списки не имеют общих элементов")
+
+# Засчитывается, но проверка > 0 была ненужной
+
+# Как решил бы я
+if res := set(nums).intersection(nums_2):
+    print(f'Да, списки имеют общие элементы: {res}')
+else:
+    print("Списки не имеют общих элементов")
+
+# Читаемость имеет значение :)
 
 """
 DEBUG
