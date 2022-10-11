@@ -7,9 +7,9 @@
 "ДА", иначе – "НЕТ"
 """
 
-city = [i for i in input("Введите 1-й список городов: ").split()]
-city_2 = [i for i in input("Введите 2-й список городов: ").split()]
-print("ДА") if len(set(city).symmetric_difference(set(city_2))) == 0 else print("НЕТ")
+print("ДА") if set(input("Введите 1-й список городов: ")
+                   .split()) == set(input("Введите 2-й список городов: ")
+                                    .split()) else print("НЕТ")
 
 """
 DEBUG
