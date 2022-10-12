@@ -8,18 +8,12 @@
 
 nums_set = set()
 
-user_input = [int(n) for n in input("Введите элементы первого списка: ").split()]
-
-# переменная nums не использовалась
-for i in user_input:
+for i in (nums := input("Введите элементы первого списка: ").split()):
     if i not in nums_set:
         print("НЕТ")
         nums_set.add(i)
     else:
         print("ДА")
-
-
-# также полученные элементы нужно было преобразовать в целое число, ты просто итерируешь строку чисел
 
 """
 DEBUG
