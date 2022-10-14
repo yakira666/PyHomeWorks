@@ -7,10 +7,9 @@
 Примечание: Задачу можно решить в одну строчку.
 """
 
-print(f'{len(set([float(i) for i in input("Введите элементы первого списка: ").split()]).intersection(set([float(i) for i in input("Введите элементы второго списка: ").split()])))}')
+print(len(set([float(i) for i in input("Введите элементы первого списка: ").split()]).intersection(set([float(i) for i in input("Введите элементы второго списка: ").split()]))))
 
-
-# Зачем нужны были переменные?
+# Для чего использовал f-строку?
 
 # Я бы упростил задачу таким образом
 print(
