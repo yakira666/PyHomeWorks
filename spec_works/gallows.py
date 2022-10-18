@@ -2,11 +2,9 @@ import random
 
 print('Категории: \n1. animals\n2. fruits')
 catalog = input(f'\nВыберите категорию: ')
-animals = ['elifan', 'cat', 'dog']
+animals = ['elephant', 'cat', 'dog']
 fruits = ['apple', 'oring', 'banana']
-death = 7
 current_catalog = []
-counter = 1
 
 # выбор категории
 if catalog == '1' or catalog == 'animals':
@@ -15,33 +13,29 @@ elif catalog == '2' or catalog == 'fruits':
     current_catalog = fruits
 
 # рандомным образом выбирает слово из категории
-random_word = random.randint(0, len(current_catalog)-1)
-blink = list(current_catalog[random_word])
+word = random.choice(current_catalog)
+blink = list(word)
 
-sq = ["*" for i in range(len(blink))]
+sq = list("_" * len(blink))
 
+counter = 1
+death = 7
 # Основной блок кода
-while death != 0 or blink != []:
-    if death > 0 and len(blink) > 0:
-        guessed = input(f'Введите {counter} букву из {len(blink)}: ')
-        if guessed not in blink:
-            death -= 1
-            print(f'Вы не угадали букву и у вас осталось {death} жизней, попробуйте ввести букву еще раз!')
-        elif guessed in blink:
-            print(f'Вы угадали букву в слове, введите следующую')
-            for i in blink:
-                a = blink.index(i)
-                if guessed == i:
-                    sq[a] = blink[a]
-                    blink.remove(i)
-                    print(*sq)
+while ("".join(sq) != word) or (death < 0):
+    guessed = input(f'Введите {counter} букву из {len(blink)}: ')
+    if guessed not in blink:
+        death -= 1
+        print(f'Вы не угадали букву и у вас осталось {death} жизней, попробуйте ввести букву еще раз!')
+    elif guessed in blink:
 
-            print()
-    else:
-        break
+        a = blink.index(guessed)
+        sq[a], blink[a] = blink[a], sq[a]
+        print("".join(sq))
+        print(f'Вы угадали букву в слове, введите следующую')
+        counter += 1
 
 # Определяет победил пользователь или проиграл
-if blink == []:
-    print('Вы победили! слово:', *(current_catalog[random_word].split()))
+if (res := "".join(sq)) == word:
+    print('Вы победили! слово:', res)
 else:
-    print('Вы проиграли! и не угадали слово', *(current_catalog[random_word].split()))
+    print('Вы проиграли! и не угадали слово', res)
