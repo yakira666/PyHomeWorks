@@ -9,9 +9,16 @@ scrabble = {1: [".", ",", "?", "!", ":"],
             9: ["W", "X", "Y", "Z"],
             0: [" "]
             }
+
 data = input("Введите ваш текст: ")
+
 data_s = data.upper()
 for i in data_s:
     for j in scrabble:
         if i in scrabble.get(j):
-            print(str(j)*((scrabble.get(j)).index(i)+1), end="")
+            print(str(j) * ((scrabble.get(j)).index(i) + 1), end="")
+
+
+# Задача решена неправильно, та же проблема, что и в предыдущей задаче
+
+# Для оптимального решения этой задачи требуется еще один вспомогательный dict()
