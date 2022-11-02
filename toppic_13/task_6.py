@@ -1,14 +1,12 @@
 data = input("Ведите ваш текст: ").split()
+s = {}
 
-f = []
 print("Результат:", end=" ")
-
 for i in data:
-    if f.count(i) >= 1:
-        print(f"{i}_{f.count(i)}", end=" ")
-        f.append(i)
-    else:
+    if i not in s:
+        s.setdefault(i)
         print(i, end=" ")
-        f.append(i)
-
-# Эту задачу мы разберем на уроке
+        s[i] = 0
+    else:
+        s[i] += 1
+        print(f"{i}_{s[i]}", end=" ")
