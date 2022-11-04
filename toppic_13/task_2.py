@@ -1,2 +1,2 @@
 data = input().upper()
-print({k: data.count(k) for k in data})
+print({k: data.count(k) for k in set(data)})

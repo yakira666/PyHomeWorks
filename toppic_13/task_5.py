@@ -5,4 +5,4 @@ morse = ['.-', '-...', '-.-.', '-..', '.', '..-.', '--.', '....', '..',
          '.----', '..---', '...--', '....-', '.....', '-....', '--...', '---..', '----.']
 work_map = dict(zip(chars, morse))
 
-print(*[work_map.get(i) for i in input("Введите ваш текст: ").upper() if i.isalnum()])
+print(*[work_map.get(ch) for ch in input("Введите ваш текст: ").upper() if ch.isalnum() if work_map.get(ch)])

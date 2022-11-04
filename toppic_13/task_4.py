@@ -1,24 +1,25 @@
-scrabble = {1: [".", ",", "?", "!", ":"],
-            2: ["A", "B", "C"],
-            3: ["D", "E", "F"],
-            4: ["G", "H", "I"],
-            5: ["J", "K", "L"],
-            6: ["M", "N", "O"],
-            7: ["P", "Q", "R", "S"],
-            8: ["T", "U", "V"],
-            9: ["W", "X", "Y", "Z"],
-            0: [" "]
+chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ "
+original = {"1": ".,?!:",
+            "2": "ABC",
+            "3": "DEF",
+            "4": "GHI",
+            "5": "JKL",
+            "6": "MNO",
+            "7": "PQRS",
+            "8": "TUV",
+            "9": "WXYZ",
+            "0": " ",
             }
 
-data = input("Введите ваш текст: ")
+"""
+Написать в одну строку
+"""
+work = {}
 
-data_s = data.upper()
-for i in data_s:
-    for j in scrabble:
-        if i in scrabble.get(j):
-            print(str(j) * ((scrabble.get(j)).index(i) + 1), end="")
+for k, v in original.items():
+    for idx, ch in enumerate(v, 1):
+        work[ch] = str(k) * idx
 
 
-# Задача решена неправильно, та же проблема, что и в предыдущей задаче
-
-# Для оптимального решения этой задачи требуется еще один вспомогательный dict()
+for ch in input().upper():
+    print(work.get(ch, ""), end="")
