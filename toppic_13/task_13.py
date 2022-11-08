@@ -2,8 +2,8 @@ amount_participants = [input("Введите фамилию кандидата �
                        range(int(input("Введите количество записей: ")))]
 
 counted_votes = {}
-for i in amount_participants:
-    counted_votes[i[0]] = counted_votes.get(i[0], 0) + int(i[1])
+for item in amount_participants:
+    counted_votes[item[0]] = counted_votes.get(item[0], 0) + int(item[1])
 
 for participant in counted_votes:
     print(f"\n{participant} | Общее количество голосов: {counted_votes.get(participant)}")

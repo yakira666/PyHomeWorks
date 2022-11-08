@@ -2,7 +2,7 @@ motherland = {}
 
 for _ in range(int(input("Введите количество записей: "))):
     country, *cities = input("Введите страну и города: ").split()
-    new_city = dict.fromkeys(cities, country)
+    new_city = dict.fromkeys(cities, country)  # Классно!
     motherland.update(new_city)
 
 for _ in range(int(input("Введите количество искомых записей: "))):
